@@ -1,12 +1,22 @@
 require './lib/gilded_rose'
 require './dummies/item_dummy'
 require_relative '../lib/items/regular_item'
-require_relative '../lib/items/cheese_item'
 require_relative '../lib/items/legendary_item'
 require_relative '../lib/items/backstage_pass_item'
 require_relative '../lib/items/conjured_item'
 
 describe GildedRose do
+
+  describe '#update refactored' do
+  let(:item1) { double :item }
+    it 'sends an update message to each item' do
+      allow(item1).to receive(:update)
+      inn1 = GildedRose.new([item1])
+      inn1.update
+      expect(item1).to have_received(:update)
+    end
+  end
+
   describe '#update' do
 
     describe 'regular items' do
@@ -23,23 +33,6 @@ describe GildedRose do
         inn1.update
         expect(item1.sell_in).to eq(-2)
         expect(item1.quality).to eq(18)
-      end
-    end
-
-    describe 'brie' do
-      it 'increases quality by 1, decreases sell in by 1 ' do
-        item2 = CheeseItem.new('Aged Brie', 2, 0)
-        inn1 = GildedRose.new([item2])
-        inn1.update
-        expect(item2.sell_in).to eq(1)
-        expect(item2.quality).to eq(1)
-      end
-      it 'quality of an item never exceeds 50, except sulfuras' do
-        item2 = CheeseItem.new('Aged Brie', 2, 50)
-        inn1 = GildedRose.new([item2])
-        inn1.update
-        expect(item2.sell_in).to eq(1)
-        expect(item2.quality).to eq(50)
       end
     end
 
