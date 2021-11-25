@@ -1,4 +1,5 @@
 item1 = Item.new('+5 Dexterity Vest', 10, 20)
+item1 = RegularItem.new('+5 Dexterity Vest', 10, 20)
 item2 = Item.new('Aged Brie', 2, 0)
 item3 = Item.new('Elixir of the Mongoose', 5, 7)
 item4 = Item.new('Sulfuras, Hand of Ragnaros', 0, 80)
@@ -34,3 +35,8 @@ This requires an update to our system:
 
 Inconsistencies:
 - The description says quality never exceeds 50, but the golden master says that quality of sulfuras stays at 80
+
+Next step
+- Separate items out into classes and subclasses
+- Items responsible for their own changing quality and sell in
+- This shouldn't be the responsibility of GildedRose
