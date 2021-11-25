@@ -1,13 +1,13 @@
+# frozen_string_literal: true
+
 require_relative '../item'
 
 class LegendaryItem < Item
-
   def update_sell_in
-    return
+    nil
   end
 
   def update_quality
-    return
+    nil
   end
-
 end

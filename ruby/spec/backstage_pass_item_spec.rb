@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/items/backstage_pass_item'
 
 describe 'BackstagePassItem' do

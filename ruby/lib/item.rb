@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Item
   attr_accessor :name, :sell_in, :quality
 
@@ -11,11 +13,11 @@ class Item
     @advanced_degrade = @regular_degrade * 2
   end
 
-  def to_s()
+  def to_s
     "#{@name}, #{@sell_in}, #{@quality}"
   end
 
-  def check_quality_range(quality)
+  def check_quality_range(_quality)
     if @quality < @min_quality
       @quality = @min_quality
     elsif @quality > @max_quality
@@ -31,6 +33,4 @@ class Item
   def update_sell_in
     @sell_in -= 1
   end
-
 end
-

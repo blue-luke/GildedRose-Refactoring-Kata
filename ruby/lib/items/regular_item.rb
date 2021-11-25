@@ -1,14 +1,14 @@
+# frozen_string_literal: true
+
 require_relative '../item'
 
 class RegularItem < Item
-
   def update_quality
     if @sell_in >= 0
       @quality -= @regular_degrade
-    elsif @sell_in < 0
+    elsif @sell_in.negative?
       @quality -= @advanced_degrade
     end
     check_quality_range(@quality)
   end
-
 end

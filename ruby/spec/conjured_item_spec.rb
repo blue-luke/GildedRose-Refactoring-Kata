@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/items/conjured_item'
 
 describe 'ConjuredItem' do

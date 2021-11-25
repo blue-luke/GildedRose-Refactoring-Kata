@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/items/regular_item'
 
 describe 'RegularItem' do

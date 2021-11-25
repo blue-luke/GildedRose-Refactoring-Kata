@@ -1,15 +1,13 @@
+# frozen_string_literal: true
+
 require_relative './item'
 
 class GildedRose
-
   def initialize(items)
     @items = items
   end
 
-  def update()
-    @items.each do |item|
-      item.update
-    end
+  def update
+    @items.each(&:update)
   end
-
 end

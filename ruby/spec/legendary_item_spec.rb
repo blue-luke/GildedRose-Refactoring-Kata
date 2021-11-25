@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/items/legendary_item'
 
 describe 'LegendaryItem' do
