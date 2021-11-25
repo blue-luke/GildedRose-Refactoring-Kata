@@ -1,5 +1,3 @@
-require './lib/item'
-
 class GildedRose
 
   def initialize(items)
@@ -75,13 +73,16 @@ class GildedRose
 
 end
 
-    # case item.name
-    # when item.name.include?("Brie")
-    #   change_brie_quality(item)
-    # when item.name.include?("Conjured")
-    #   change_conjured_item_quality(item)
-    # when item.name.include?("Backstage passes")
-    #   change_backstage_pass_quality(item)
-    # when item.name.include?("Sulfuras")
-    # else change_regular_item_quality(item)
-    # end
+class Item
+  attr_accessor :name, :sell_in, :quality
+
+  def initialize(name, sell_in, quality)
+    @name = name
+    @sell_in = sell_in
+    @quality = quality
+  end
+
+  def to_s()
+    "#{@name}, #{@sell_in}, #{@quality}"
+  end
+end
