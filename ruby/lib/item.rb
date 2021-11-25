@@ -23,5 +23,14 @@ class Item
     end
   end
 
+  def update
+    update_sell_in
+    update_quality
+  end
+
+  def update_sell_in
+    @sell_in -= 1
+  end
+
 end
 
