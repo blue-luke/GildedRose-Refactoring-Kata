@@ -21,17 +21,6 @@ class GildedRose
 
   def update_quality(item)
 
-    # case item.name
-    # when item.name.include?("Brie")
-    #   change_brie_quality(item)
-    # when item.name.include?("Conjured")
-    #   change_conjured_item_quality(item)
-    # when item.name.include?("Backstage passes")
-    #   change_backstage_pass_quality(item)
-    # when item.name.include?("Sulfuras")
-    # else change_regular_item_quality(item)
-    # end
-
     if item.name.include?("Brie")
       change_brie_quality(item)
     elsif item.name.include?("Conjured")
@@ -85,3 +74,14 @@ class GildedRose
   end
 
 end
+
+    # case item.name
+    # when item.name.include?("Brie")
+    #   change_brie_quality(item)
+    # when item.name.include?("Conjured")
+    #   change_conjured_item_quality(item)
+    # when item.name.include?("Backstage passes")
+    #   change_backstage_pass_quality(item)
+    # when item.name.include?("Sulfuras")
+    # else change_regular_item_quality(item)
+    # end
