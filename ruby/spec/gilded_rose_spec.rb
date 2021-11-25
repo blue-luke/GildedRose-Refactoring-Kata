@@ -1,7 +1,7 @@
 require './lib/gilded_rose'
 
 describe GildedRose do
-  it '#update_quality' do
+  it '#update' do
     item9 = Item.new('Conjured Mana Cake', 3, 6)
     inn1 = GildedRose.new([item9])
     inn1.update
