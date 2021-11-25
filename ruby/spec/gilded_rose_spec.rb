@@ -10,7 +10,10 @@ describe GildedRose do
   end
 end
 
-# Change update_quality to update, as it updates more than quality
-# Have two sub-methods, one for sell_in
-# And one for quality
-# Quality method should be restructued 
+# Have case-when structure
+# Detect name
+# Direct to a specific decrease quality method
+# Increase quality of brie 
+# Increase quality of baackstage passes, additional rules
+# Decrease quality on conjured by 2
+# Decrease quality of others by 1
