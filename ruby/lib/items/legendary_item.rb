@@ -3,7 +3,6 @@
 require_relative '../item'
 
 class LegendaryItem < Item
-
   def update
     update_sell_in
     update_quality
